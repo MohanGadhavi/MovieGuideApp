@@ -9,7 +9,7 @@ let getMovie = () => {
 
   if (movieName.length <= 0) {
     resultElement.innerHTML = `<h3 class="emptySubmit">Please enter movie name first!!!</h3>`;
-    console.log("Please enter movie name first!");
+    // console.log("Please enter movie name first!");
   } else {
     fetch(url)
       .then((res) => res.json())
@@ -61,5 +61,12 @@ let getMovie = () => {
       });
   }
 };
+
+movieElement.addEventListener("keypress", (event) => {
+  if (event.key == "Enter") {
+    getMovie();
+    event.target.blur();
+  }
+});
 
 searchElement.addEventListener("click", getMovie);
