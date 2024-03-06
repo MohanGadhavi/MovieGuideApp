@@ -57,11 +57,15 @@ let getMovie = () => {
           </div>
     `;
         } else {
+          resultElement.style.display = "initial";
+          loadingAnimation.style.display = "none";
           resultElement.innerHTML = `<h3 class="ErrorMsg">${data.Error}</h3>`;
         }
       })
 
       .catch(() => {
+        resultElement.style.display = "initial";
+        loadingAnimation.style.display = "none";
         resultElement.innerHTML = `<h3 class="ErrorMsg">Error Occured</h3>`;
       });
   }
