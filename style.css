@@ -161,6 +161,9 @@ input[type=submit]:hover {
     text-align: center;
     color: rgb(220, 220, 220);
 }
+.ErrorMsg img{
+    width: 100px;
+}
 
 .mainDetails {
     /* background-color: azure; */

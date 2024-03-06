@@ -59,7 +59,11 @@ let getMovie = () => {
         } else {
           resultElement.style.display = "initial";
           loadingAnimation.style.display = "none";
-          resultElement.innerHTML = `<h3 class="ErrorMsg">${data.Error}</h3>`;
+          resultElement.innerHTML = `
+          <div class="ErrorMsg">
+            <img src="./assets/not-found.png">
+            <h3>${data.Error}</h3>
+          </div>`;
         }
       })
 
